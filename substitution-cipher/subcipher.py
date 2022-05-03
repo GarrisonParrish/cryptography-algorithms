@@ -1,4 +1,4 @@
-# Index matters, so best approach is to encode the alphabet as a string
+"""Simple substitution cipher using only lowercase letters. My implementation generates a random key during runtime."""
 
 import random
 
@@ -6,7 +6,7 @@ def main():
     alpha: str = "abcdefghijklmnopqrstuvwxyz"
     key: str = generate_key(alpha)
 
-    message: str = input("Enter a word to be encoded: ")
+    message: str = input("Enter a word to be encoded: ").lower()
 
     result: str = encode_subcipher(message, alpha, key)
     
